@@ -1,6 +1,7 @@
 import React from 'react'
 import { BiSearch } from 'react-icons/bi'
 import MenuItem from '../MenuItem'
+import ThemeComp from '../Theme/ThemeComp'
 
 const Header = () => {
 
@@ -22,9 +23,13 @@ const Header = () => {
         MovieApp
       </div>
       <div className='flex flex-1 items-center gap-2 border p-3 rounded-lg'>
-        <input placeholder='Arama Yapınız' className='outline-none flex-1 ' type="text" />
+        <input placeholder='Arama Yapınız' className='outline-none flex-1 bg-transparent ' type="text" />
         <BiSearch size={25} />
       </div>
+
+      <ThemeComp />
+
+
       {menu.map((mn, i) => (
         <MenuItem mn={mn} key={i} />
       ))}
